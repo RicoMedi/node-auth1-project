@@ -23,6 +23,7 @@ server.use(express.json());
 server.use(cors());
 
 server.use("/api/users", userRouter);
+server.use("/api/auth", authRouter)
 // server.use("/api/auth", authRouter)
 server.get("/", (req, res) => {
   res.json({ api: "up" });
